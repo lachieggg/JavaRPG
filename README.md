@@ -1,5 +1,5 @@
 # JavaAdventure
-Java based role playing game
+Java based role playing game.
 
 To run, execute `./run.sh`. 
 
