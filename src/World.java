@@ -39,14 +39,13 @@ public class World
 	private static final int INITIAL_YPOS = 684;
 
 	/* Create a new World object. */
-    public World()
-    throws SlickException
+    public World() throws SlickException
     {
-    	/** Create the TiledMap background object */
+    	/* Create the TiledMap background object */
     	background = new TiledMap("assets/map.tmx", "assets");
-    	/** Create the new player with starting coordinates */
+    	/* Create the new player with starting coordinates */
     	player = new Player(INITIAL_XPOS, INITIAL_YPOS);
-    	/** Create the camera
+    	/* Create the camera
     	 * The screen dimensions come from RPG
     	 */
     	camera = new Camera(player, tileSize);
@@ -73,8 +72,7 @@ public class World
      * @param dir_y The player's movement in the y axis (-1, 0 or 1).
      * @param delta Time passed since last frame (milliseconds).
      */
-    public void update(double dir_x, double dir_y, int delta)
-    throws SlickException
+    public void update(double dir_x, double dir_y, int delta) throws SlickException
     {
     	/* Define the new x and y positions */
     	double newXPos = player.getXPos() + delta*MOVEMENT_RATE*dir_x;
@@ -92,8 +90,7 @@ public class World
     /** Render the entire screen, so it reflects the current game state.
      * @param g The Slick graphics object, used for drawing.
      */
-    public void render(Graphics g)
-    throws SlickException
+    public void render(Graphics g) throws SlickException
     {
     	/** Render the background
     	 *  The first pair of arguments set the x and y positions on the screen
